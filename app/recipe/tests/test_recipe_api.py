@@ -349,7 +349,7 @@ class PrivateRecipeAPITests(TestCase):
         self.assertIn(ingredient2, recipe.ingredients.all())
         self.assertNotIn(ingredient1, recipe.ingredients.all())
 
-    def clear_recipe_ingredients(self):
+    def test_clear_recipe_ingredients(self):
         """Test clearing a recipe's ingredients"""
         ingredient = Ingredient.objects.create(user=self.user, name='Garlic')
         recipe = create_recipe(user=self.user)
